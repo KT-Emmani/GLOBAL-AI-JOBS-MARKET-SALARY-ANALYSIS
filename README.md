@@ -47,10 +47,20 @@ This dataset is a csv file and can be retrieved from Kaggle.com [download](https
   - application_deadline	- Application deadline	
   - job_description_length	- Character count of job description
   - benefits_score	- Numerical score of benefits package (1-10)
-  - Company Name 
+  - Company Name
+
+- ### Dataset Sample
+  
+   <img width="3000" height="1904" alt="ai_job_dataset - Excel 7_17_2025 5_19_31 PM" src="https://github.com/user-attachments/assets/3b875da6-816b-4e1f-9810-13ee92919129" />
+
 
 
 ## Data Cleaning & Preparation
+
+- ### SQL
+   - Launched Microsoft SSMS database, connected to the SQL Server.
+   - Created a database to import the data as a table for the analysis.
+   - Used the Window function to calculate the Average Salary across the 
 
 
 ## Data Analysis
