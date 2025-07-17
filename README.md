@@ -21,8 +21,33 @@ This project aims to conduct comprehensive analysis and visualizes AI jobs marke
 
 ## Dataset
 
-### Source
-This dataset is a csv file and can be retrieved from Kaggle.com [download](https://www.kaggle.com/datasets/bismasajjad/global-ai-job-market-and-salary-trends-2025?select=ai_job_dataset.csv)
+- ###  Source
+This dataset is a csv file and can be retrieved from Kaggle.com [download](https://www.kaggle.com/datasets/bismasajjad/global-ai-job-market-and-salary-trends-2025?select=ai_job_dataset.csv). 
+
+- ### Dataset Description
+  The dataset consist of the following columns;
+
+
+  - job_id - Unique identifier for each job posting
+  - job_title - Standardized job title
+  - salary_usd - Annual salary in USD
+  - salary_currency - Original salary currency
+  - salary_local - Salary in local currency	
+  - experience_level- EN (Entry), MI (Mid), SE (Senior), EX (Executive)	
+  - employment_type	- FT (Full-time), PT (Part-time), CT (Contract), FL (Freelance)
+  - company_location - Country where company is located	
+  - company_size - S (Small <50), M (Medium 50-250), L (Large >250)
+  - employee_residence - Country where employee resides	
+  - remote_ratio - 0 (No remote), 50 (Hybrid), 100 (Fully remote)	
+  - required_skills -	Top 5 required skills (comma-separated) 
+  - education_required	- Minimum education requirement	
+  - years_experience	- Required years of experience
+  - industry	- Industry sector of the company
+  - posting_date - Date when job was posted	Date
+  - application_deadline	- Application deadline	
+  - job_description_length	- Character count of job description
+  - benefits_score	- Numerical score of benefits package (1-10)
+  - Company Name 
 
 
 ## Data Cleaning & Preparation
