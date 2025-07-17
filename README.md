@@ -21,6 +21,10 @@ This project aims to conduct comprehensive analysis and visualizes AI jobs marke
 
 ## Dataset
 
+### Source
+This dataset is a csv file and can be retrieved from Kaggle.com [download](https://www.kaggle.com/datasets/bismasajjad/global-ai-job-market-and-salary-trends-2025?select=ai_job_dataset.csv)
+
+
 ## Data Cleaning & Preparation
 
 
