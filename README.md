@@ -60,7 +60,8 @@ This dataset is a csv file and can be retrieved from Kaggle.com [download](https
 - ### SQL
    - Launched Microsoft SSMS database, connected to the SQL Server.
    - Created a database to import the data as a table for the analysis.
-   - Used the Window function to calculate the Average Salary across the 
+   - Used the Window function to calculate the Average Salary over Job_Title, Experience_level, Employment_Type, Company_Location. This was done to know the average salary of a specific job title using the PARTITION BY Clause. The average salary is then repeated for all rows in the respective job title, experience level, employment type and company's location.
+   - Used the CASE clause to rename some coloumns 
 
 
 ## Data Analysis
