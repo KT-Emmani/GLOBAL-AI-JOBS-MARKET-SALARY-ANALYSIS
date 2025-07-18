@@ -153,7 +153,14 @@ FROM Job_Market
 - ### Power Bi
    - Connected to the SQL Server to import the final data into Power Bi.
    - Created a date table for the time series analysis on the dataset.
-   - Used DAX 
+   - Used DAX to calculate some measures such as Total Job Postings, Total Annual Salary, Average Salary, Average posting duration.
+   - Built an interactive dashboard where you can navigate other pages such as Overview, Country, Industry and Company for insights.
+
+ - ### Challenges & Solutions
+Analysing the required_skills field was a challenge since all skills required for a unique job posting was grouped together. I resolved it by spliting the required_skills and duplicating the query table in Power Query and deleting the other columns to excluding the job_id and the skills columns. I then unpivot all the 5 skills columns against their unique job_id. Then later linked the job_id in skills table to the fact table.
+
+<img width="3000" height="1904" alt="Power BI Desktop 7_18_2025 6_34_15 PM" src="https://github.com/user-attachments/assets/65dc1bc6-6d0b-42db-a8f7-bee6e769dfb6" />
+
 ## Data Analysis
 
 ## Dashboard
