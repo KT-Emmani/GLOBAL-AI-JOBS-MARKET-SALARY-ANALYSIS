@@ -157,11 +157,72 @@ FROM Job_Market
    - Built an interactive dashboard where you can navigate other pages such as Overview, Country, Industry and Company for insights.
 
  - ### Challenges & Solutions
-Analysing the required_skills field was a challenge since all skills required for a unique job posting was grouped together. I resolved it by spliting the required_skills and duplicating the query table in Power Query and deleting the other columns to excluding the job_id and the skills columns. I then unpivot all the 5 skills columns against their unique job_id. Then later linked the job_id in skills table to the fact table.
+Analysing the required_skills field was a challenge since all skills required for a unique job posting was grouped together. I resolved it by spliting the required_skills, duplicated the table in Power Query and deleted the other columns excluding the job_id and the skills columns. I then unpivoted all the 5 skills columns against their unique job_id. Then later linked the job_id in skills table to the fact table in the model view.
 
 <img width="3000" height="1904" alt="Power BI Desktop 7_18_2025 6_34_15 PM" src="https://github.com/user-attachments/assets/65dc1bc6-6d0b-42db-a8f7-bee6e769dfb6" />
 
 ## Data Analysis
+
+ ### KPI 
+ - Over 1.73b annual salaries been offered in the AI Jobs from Jan 2024 to Mar 2025
+ - Average Salaries is 115.35k 
+ - Average Duration for Job Posting - 44 days
+ - No. of AI Jobs - 20
+   
+ ### Country
+ - Most Hiring Country - Germany with 814 jobs offered
+ - Least Hirng Country - Norway with 721 jobs Offered
+ - Most Paying Country - Switzerland with 170.64k avaerage salary
+ - Least Paying Country - India with 84.24k average salary
+
+ ### Industry
+ - Most Hiring Industry - Retail with 1,063 jobs offered
+ - Least Hiring Industry - Education with 956 jobs offered
+ - Most paying Industry - Consulting with 117.60k average salary
+ - Least paying Industry - Gaming with 112.98k average salary
+
+  ### Company
+ - Most Paying company - TechCorp Inc with 121.21K offered
+ - Least Paying Comapny - AI Innovations with 111.51k offered
+ - Most Hiring Company - TechCorp Inc with 980 jobs offered
+ - Least Hiring Company - Algorithmic Solutions with 885 jobs offered
+
+  ### Other Insights
+ - Experience Level influence on Salary - Executive level with avg salary of 187.72k annually (Snr - 122.19k, Middle - 87.96K & Entry - 63.13k)
+ - Company Size with the most Hiring = Small - 5,007, Medium - 4995, Large - 4,998
+ - Most Remote AI Jobs - No Remote - 33.83%, Hybrid - 33.37%, Fully Remote - 32.80%
+ - Most Paying Remote Type - Fully Remote - 116.16K, Hybrid - 115.78K, No Remote - 114.14K
+ - Experience Influence on Salary- Positive related, The higher your experience the higher your salary
+ - Top 5 Paying Roles
+	- Al Specialist - 120.57k
+	- Machine Learning Engineer -118.83k
+	- Head of AI - 118.54K
+	- AI Research Scientist - 117.90k
+	- AI Architect - 17.44k
+
+ - Top 5 Hiring Roles
+	- Machine Learning Engineering - 772
+	- AI Architect - 771
+	- Head of AI - 765
+	- AI Research Scientist - 756
+	- AI Specialist - 728
+
+
+ - Top 5 Hiring Skiils needed
+   	 - Python - 4450
+   	 - SQL - 3407
+   	 - Tensorflow - 3022
+   	 -  Kubernetes - 3009
+   	 - Scala - 2794
+   
+ - Benefit Offered -  9.0-9.99 with 3052 and 10 with 142 least offered benefit
+ - Employment type - Full Time with 116.34K, Contract with 115.92k, Freelance with 114.97k, Part Time with 114.15k average salary
+ - Top 5 Employee residence -
+   	- Sweden - 790
+	- France - 781
+   	- Denmark - 777
+   	- Austria - 776
+   	- India - 772
 
 ## Dashboard
   <img width="2500" height="1415" alt="Overview" src="https://github.com/user-attachments/assets/f6b8ad2d-07bf-4b7b-bc8e-354c328d91b0" />
