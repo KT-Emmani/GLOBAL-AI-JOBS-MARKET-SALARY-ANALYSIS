@@ -9,7 +9,7 @@
 ## Table of Content
 - [Overview](#overview)
 - [Dataset](#dataset)
-- [Data Cleaning & Preparation](#data-cleaning-&-preparation)
+- [Data Cleaning & Preparation](#datacleaning&preparation)
 - [Data Analysis](#data-analysis)
 - [Dashboard](#dashboard)
 
