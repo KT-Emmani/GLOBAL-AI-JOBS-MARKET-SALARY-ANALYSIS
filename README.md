@@ -9,7 +9,7 @@
 ## Table of Content
 - [Overview](#overview)
 - [Dataset](#dataset)
-- [Data Cleaning & Preparation](#datacleaning&preparation)
+- [Data Cleaning and Preparation](#data-cleaning-and-preparation)
 - [Data Analysis](#data-analysis)
 - [Dashboard](#dashboard)
 
@@ -55,7 +55,7 @@ This dataset is a csv file and can be retrieved from Kaggle.com [download](https
 
 
 
-## Data Cleaning & Preparation
+## Data Cleaning and Preparation
 
 - ### SQL
    - Launched Microsoft SSMS database, connected to the SQL Server.
