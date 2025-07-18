@@ -61,9 +61,99 @@ This dataset is a csv file and can be retrieved from Kaggle.com [download](https
    - Launched Microsoft SSMS database, connected to the SQL Server.
    - Created a database to import the data as a table for the analysis.
    - Used the Window function to calculate the Average Salary over Job_Title, Experience_level, Employment_Type, Company_Location. This was done to know the average salary of a specific job title using the PARTITION BY Clause. The average salary is then repeated for all rows in the respective job title, experience level, employment type and company's location.
-   - Used the CASE clause to rename some coloumns 
+   - Used the CASE Statement to replace data in some fields when it meet a certain conditions. These fields are experience_level, employment_type, remote_ratio and company_size. Also, to group the benefit_score.
+   - Used CTE to create a temporary table for complex queries and referencing.
+   - Created a Table View for my final data for the analysis and visualization.
 
+``` sql
+ALTER VIEW Tech_Jobs_Market AS
+-- Based Query--
+WITH Job_Market AS
+(
+SELECT 
+	Job_id,
+    Job_title,
+    salary_usd,
+	Salary_usd/12 AS Monthly_Salary,
+	AVG(Salary_usd) OVER (PARTITION BY Job_Title, Experience_level, Employment_Type, Company_Location ORDER BY  Job_Title, Experience_Level, Employment_Type, Company_Location) AS AVG_Salary,
+    experience_level,
+	-- Rename the experience level column--
+		CASE 	
+			WHEN experience_level = 'EN' THEN 'Entry '
+            WHEN experience_level = 'MI' THEN 'Middle'
+            WHEN experience_level = 'SE' THEN 'Senior'
+            ELSE 'Executive'
+		END AS Exp_Lvl,
+    employment_type,
+	-- Rename the employment level column--
+		CASE 	
+			WHEN employment_type = 'CT' THEN 'Contract'
+            WHEN employment_type = 'FT' THEN 'Full Time'
+            WHEN employment_type = 'PT' THEN 'Part Time'
+            ELSE 'Freelance'
+		END AS Empl_Type,
+    company_location,
+    company_size,
+	-- Rename the company size column--
+		CASE 
+			WHEN company_size = 'S' THEN 'Small < 50'
+            WHEN company_size = 'M' THEN 'Medium 50 - 250'
+            ELSE 'Large >250'
+		END AS Comp_Size,
+    employee_residence,
+    remote_ratio,
+		CASE
+			WHEN remote_ratio = '100' THEN 'Fully Remote'
+            WHEN remote_ratio = '50' then 'Hybrid'
+            ELSE 'No Remote'
+		END AS Remote_Type, 
+    required_skills,
+    education_required,
+    years_experience,
+    industry,
+    posting_date,
+	DATEDIFF(Day, Posting_date, application_deadline) AS Recruitment_Period,
+    benefits_score,
+		CASE 
+			WHEN benefits_score <= 5.9 THEN '5.0 - 5.9'
+			WHEN benefits_score BETWEEN 6 AND 6.9 THEN '6.0 - 6.9'
+			WHEN benefits_score BETWEEN 7 AND 7.9 THEN '7.0 - 7.9'
+			WHEN benefits_score BETWEEN 8 AND 8.9 THEN '8.0 - 8.9'
+			WHEN benefits_score BETWEEN 9 AND 9.9 THEN '9.0 - 9.9'
+			ELSE '10.0' 
+		END AS Benefit_score_Bucket,
+    company_name
+FROM ai_job_dataset
+)
+-- Final Data--
+SELECT 
+	job_id,
+    Job_title,
+    salary_usd,
+	Monthly_Salary,
+	AVG_Salary,
+	Exp_Lvl,
+	Empl_Type,
+    company_location,
+	Comp_Size,
+    employee_residence,
+	Remote_Type, 
+    required_skills,
+    education_required,
+    years_experience,
+    industry,
+    posting_date,
+	Recruitment_Period,
+    benefits_score,
+	Benefit_score_Bucket,
+    company_name
+FROM Job_Market
+```
 
+- ### Power Bi
+   - Connected to the SQL Server to import the final data into Power Bi.
+   - Created a date table for the time series analysis on the dataset.
+   - Used DAX 
 ## Data Analysis
 
 ## Dashboard
