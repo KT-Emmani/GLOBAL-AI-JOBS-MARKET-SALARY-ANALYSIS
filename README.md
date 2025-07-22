@@ -66,7 +66,7 @@ This dataset is a csv file and can be retrieved from Kaggle.com [download](https
    - Created a Table View for my final data for the analysis and visualization.
 
 ``` sql
-ALTER VIEW Tech_Jobs_Market AS
+CREATE VIEW Tech_Jobs_Market AS
 -- Based Query--
 WITH Job_Market AS
 (
