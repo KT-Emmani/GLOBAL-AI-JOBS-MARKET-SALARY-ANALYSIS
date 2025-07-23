@@ -154,6 +154,7 @@ FROM Job_Market
    - Connected to the SQL Server to import the final data into Power Bi.
    - Created a date table for the time series analysis on the dataset.
    - Used DAX to calculate some measures such as Total Job Postings, Total Annual Salary, Average Salary, Average posting duration.
+   - Created a wireframe background using Power Point and uploaded to Power Bi for 
    - Built an interactive dashboard where you can navigate other pages such as Overview, Country, Industry and Company for insights.
 
  - ### Challenges & Solutions
